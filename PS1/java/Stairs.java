@@ -33,7 +33,15 @@ public class Stairs {
 
 
 	public static void stairs(int input) {
-		//YOUR CODE HERE
+		for (int line = 1; line <= input; line++) {
+			for (int i = input - line; i > 0; i--){
+				System.out.print(" ");
+			}
+			for (int j = line; j > 0; j--) {
+				System.out.print("#");
+			}
+			System.out.println();
+		}
 		return;
 	}
 

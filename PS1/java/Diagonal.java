@@ -35,7 +35,14 @@ public class Diagonal {
 
 	public static int diagonal(int[][] input) {
 		//YOUR CODE HERE
-		return 0;
+		int d1 = 0;
+		int d2 = 0;
+		for (int i = 0; i < input[0].length; i++) {
+				d1 += input[i][i];
+				d2 += input[i][input[0].length - 1 - i];
+		}
+		int product = d1 * d2;
+		return product;
 	}
 
 

@@ -35,11 +35,35 @@ PLEASE LOOK AT PS1.txt FOR MORE DETAILS!!!
 
 */
 
+
+
 public class Anagram {
 
 	public static boolean anagram(String input) {
 		//YOUR CODE HERE
-		return false;
+		int oddLetters = 0;
+		int counter = 0;
+		for (int i = 0; i < input.length(); i++) {
+			boolean newChar = true;
+			for (int k = 0; k < i; k++) {
+				if (input.charAt(i) == input.charAt(k))
+					newChar = false;
+			}
+			if (newChar) {
+				for (int j = i; j < input.length(); j++) {
+				if (input.charAt(i) == input.charAt(j))
+					counter++;
+				}
+				if (counter%2 != 0 )
+				oddLetters++;
+			}
+		}
+		if (oddLetters == 0)
+			return true;
+		else if ((input.length()%2==1) && (oddLetters == 1)
+			return true;
+		else
+			return false;
 	}
 
 
